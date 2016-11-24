@@ -1,3 +1,4 @@
+// Not Tested
 var QRAR = require('qrar');
 var drone = require('ar-drone');
 var client  = drone.createClient();
