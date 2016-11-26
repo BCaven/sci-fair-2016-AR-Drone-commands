@@ -4,6 +4,7 @@ var drone = require('ar-drone');
 var client  = drone.createClient();
 
 client.animateLeds('blinkRed', 5, 3);
+client.ftrim();
 client.takeoff();
 var codes = new QRAR(drone);
 
