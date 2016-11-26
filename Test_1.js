@@ -13,3 +13,14 @@ codes.on('qrcode', function (code) {
 });
 
 codes.start();
+
+// Function that makes the drone do something
+var dosomething = function(drone){
+  
+  // drone actions go here
+  drone.action(parameter);
+  drone.do(something);
+};
+
+// Call it here like this
+dosomething(client);
