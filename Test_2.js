@@ -3,6 +3,7 @@ var drone = require('ar-drone');
 var client  = drone.createClient();
 //Makes drone takeoff, stabalize and land
 client.animateLeds('blinkRed', 5, 3);
+client.ftrim();
 client.takeoff();
 client.stop();
 client.land();
