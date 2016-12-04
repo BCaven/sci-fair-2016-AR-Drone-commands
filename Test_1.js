@@ -1,33 +1,21 @@
-
 var QRAR = require('qrar');
 var drone = require('ar-drone');
 var client  = drone.createClient();
-//change camera to downwards facing
-client.config('video:video_channel', 3);
-
-client.animateLeds('blinkRed', 5, 3);
+client.setMaxListeners(10);
 client.ftrim();
-client.takeoff();
+//client.animateLeds('blinkRed', 5, 3);
+//client.takeoff();
+client.config('video:video_channel', 3);
 var codes = new QRAR(drone);
 
 codes.on('qrcode', function (code) {
   console.log(code);
-  client.land();
+  if (code = 'client.land();'){
+    client.animateLeds('blinkGreen',5,1);
+  }
+  if (code = 'client.takeoff();'){
+    client.animateLeds('blinkRed', 5, 1);
+  }
 });
 
 codes.start();
-
-// Function that makes the drone do something
-//var scan = function(drone){
-  
-  // drone actions go here
-  //drone.front(0.1);
-  //drone.stop
-  //codes.on('qrcode', function (code) {
-    //console.log(code);
-    //client.land();
-  //});
-//};
-
-// Call it here like this
-//scan(client);
