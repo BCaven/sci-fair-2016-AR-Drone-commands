@@ -4,7 +4,7 @@ var client  = drone.createClient();
 client.setMaxListeners(10);
 client.ftrim();
 //client.animateLeds('blinkRed', 5, 3);
-//client.takeoff();
+client.takeoff();
 client.config('video:video_channel', 3);
 var codes = new QRAR(drone);
 
