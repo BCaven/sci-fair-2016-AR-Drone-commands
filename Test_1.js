@@ -5,6 +5,7 @@ client.setMaxListeners(10);
 client.ftrim();
 //client.animateLeds('blinkRed', 5, 3);
 //client.takeoff();
+//need to hold drone above QR codes for it to sense the QR codes
 client.config('video:video_channel', 3);
 var codes = new QRAR(drone);
 
