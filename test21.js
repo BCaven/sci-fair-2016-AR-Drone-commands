@@ -34,4 +34,5 @@ new_mission.prototype.runActions = function () {
     }
 };
 mission1 = new new_mission(mission);
-mission1.setActions([("takeoff"),("goto",{x:1,y:1}),("land")])
+mission1.setActions([("takeoff"),("goto",{x:1,y:1}),("land")]);
+mission1.runActions();
