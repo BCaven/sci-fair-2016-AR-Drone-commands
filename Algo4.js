@@ -14,3 +14,4 @@ codes.on('qrcode', function (code) {
 });
 
 codes.start();
+
