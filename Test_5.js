@@ -11,10 +11,10 @@ mission.client().ftrim();
 mission.zero();
 mission.takeoff()
       .client().config('video:video_channel', 3);
-      mission.altitude(0.5)  // Climb to altitude = 0.5 meter
-      mission.forward(1)
-      codes.start()
-      mission.hover(1000)
+      mission.altitude(0.5);
+      mission.forward(1);
+      codes.start();
+      mission.hover(1000);
 mission.run(function (err, result) {
     if (err) {
         console.trace("Oops, something bad happened: %s", err.message);
