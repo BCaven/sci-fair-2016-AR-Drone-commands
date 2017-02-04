@@ -1,8 +1,7 @@
 var QRAR = require('qrar');
 var drone = require('ar-drone');
 var client  = drone.createClient();
-client.setMaxListeners(10);
-client.animateLeds('blinkRed', 5, 3);
+client.ftrim();
 client.takeoff();
 client.config('video:video_channel', 3);
 var codes = new QRAR(drone);
